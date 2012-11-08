@@ -6,7 +6,7 @@ $blue: #526f93
 
 body
   background: $gray
-  padding-top: 120px
+  padding-top: 220px
   
 p,
 h1,
@@ -23,11 +23,15 @@ h1
   margin: 0px
   font-weight: normal
   text-align: center
+  position: fixed
+  top: 120px
+  width: 100%
   
 .center
   text-align: center
   
 .navbar
+  background: $gray
   a.brand
     width: 92px
     line-height: 50px
@@ -58,7 +62,18 @@ h1
         background: url(/assets/submenu-marker.png) bottom center no-repeat
 
 #body
-  margin-top: 50px
   a
     color: $dark-green
   
+  
+  /* About Me */
+  
+  #about-me
+    > div
+      width: 428px
+      padding: 15px
+      border: 1px solid $dark-gray
+      background: white
+    .copy
+      font-size: 16px
+      line-height: 28px
