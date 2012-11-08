@@ -1,0 +1,62 @@
+$gray: #f2f2f2
+$light-green: #cfda2b
+$dark-green: #75813a
+$blue: #526f93
+
+body
+  background: $gray
+  padding-top: 120px
+  
+p,
+h1,
+h2,
+h3,
+h4,
+h5
+  color: $blue
+  
+h1
+  background: white
+  font-size: 20px
+  line-height: 50px
+  margin: 0px
+  font-weight: normal
+  text-align: center
+  
+.center
+  text-align: center
+  
+.navbar
+  a.brand
+    width: 92px
+    line-height: 50px
+    text-indent: -10000px
+    background: url(/assets/logo.png)
+    margin-left: 0px
+  ul.nav
+    li
+      line-height: 50px
+      a
+        color: $dark-green
+        text-shadow: none
+      a:hover
+        color: black
+      a.selected
+        background: url(/assets/menu-marker.png) bottom center no-repeat
+    li:last-of-type
+      a
+        padding-right: 0px
+.subnavbar
+  top: 70px
+  background: $light-green
+  ul.nav
+    li
+      line-height: 30px
+      a:hover
+        color: black
+      a.selected
+        background: url(/assets/submenu-marker.png) bottom center no-repeat
+
+#body
+  margin-top: 50px
+  
