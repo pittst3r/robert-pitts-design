@@ -1,5 +1,7 @@
 RobertPittsDesign::Application.routes.draw do
   
+  resources :pages
+
   match 'ui(/:action)', controller: 'uis'
 
   # The priority is based upon order of creation:

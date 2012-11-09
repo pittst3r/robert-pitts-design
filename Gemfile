@@ -7,6 +7,9 @@ gem 'rails', '3.2.8'
 
 gem 'decent_exposure'
 gem 'jquery-rails'
+gem 'mongo'
+gem 'bson_ext'
+gem 'mongoid'
 
 group :assets do
   gem 'haml-rails'
