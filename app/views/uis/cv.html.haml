@@ -1,0 +1,69 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title Robert Pitts Design
+    = csrf_meta_tags
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    = javascript_include_tag "application"
+    = stylesheet_link_tag "application", :media => "all"
+
+  %body
+    .navbar.navbar-fixed-top
+      .container
+        %a.brand{ href: "#" } Robert Pitts
+        %ul.nav.pull-right
+          %li
+            %a{ href: "#" } About
+          %li
+            %a{ href: "#" } Contact
+          %li
+            %a{ href: "#" } Skills
+          %li
+            %a.selected{ href: "#" } Curriculum Vitæ
+          %li
+            %a{ href: "#" } Github
+          %li
+            %a{ href: "#" } Linkedin
+            
+    %h1 
+      .container Curriculum Vitæ
+    
+    #body.container
+      .row
+        .curriculum.span10.pull-right.box
+          %h2 Developer and Designer <small>@ Robert Pitts Design</small>
+          %p Designed websites; developed websites using Ruby on Rails, Sinatra, jQuery, HAML, and SASS; developed brand identities including logos, colors, type selection, and style guides; designed print materials including business cards, flyers, postcards, thank you notes, etc.
+        .vitae.span2.pull-left
+          .to
+            %h3 To
+            %p Present
+          .from
+            %h3 From
+            %p December 2011
+      .row
+        .curriculum.span10.pull-right.box
+          %h2 Chief Technical Officer <small>@ Flagstuff.com</small>
+          %p Led e-commerce marketing efforts including search engine marketing, SEO, remarketing, social me- dia, direct mail, and customer retention; implemented systems to improve efficiency including Zendesk, Google Apps, Highrise, VoIP virtual PBX, shipping workflows, custom order workflows, etc.; directed new platform and website... <a href="#">Read more...</a>
+        .vitae.span2.pull-left
+          .to
+            %h3 To
+            %p June 2012
+          .from
+            %h3 From
+            %p November 2011
+      .row
+        .curriculum.span10.pull-right.box
+          %h2 Senior Developer & Designer <small>@ Flagstuff.com</small>
+          %p Led e-commerce marketing efforts including search engine marketing, SEO, remarketing, social me- dia, direct mail, and customer retention; implemented systems to improve efficiency including Zendesk, Google Apps, Highrise, VoIP virtual PBX, shipping workflows, custom order workflows, etc.; directed new platform and website... <a href="#">Read more...</a>
+        .vitae.span2.pull-left
+          .to
+            %h3 To
+            %p June 2012
+          .from
+            %h3 From
+            %p November 2011
