@@ -18,16 +18,16 @@
         %a.brand{ href: "#" } Robert Pitts
         %ul.nav.pull-right
           %li
-            %a{ href: "#" } About
+            %a{ href: "/about", class: "#{selected('about')}" } About
           %li
-            %a{ href: "#" } Contact
+            %a{ href: "/contact", class: "#{selected('contact')}" } Contact
           %li
-            %a{ href: "#" } Skills
+            %a{ href: "#", class: "#{selected('skills')}" } Skills
           %li
-            %a{ href: "#" } Curriculum Vitæ
+            %a{ href: "#", class: "#{selected('cv')}" } Curriculum Vitæ
           %li
-            %a{ href: "#" } Github
+            %a{ href: "https://github.com/sweatypitts" } Github
           %li
-            %a{ href: "#" } Linkedin
+            %a{ href: "http://www.linkedin.com/in/robertdeanpitts" } Linkedin
     
     = yield
