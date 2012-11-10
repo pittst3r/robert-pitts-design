@@ -1,0 +1,16 @@
+%h1 
+  .container Curriculum Vitæ
+
+#body.container
+  - curricula.each do |curriculum|
+    .row
+      .curriculum.span10.pull-right.box
+        %h2= "#{curriculum.title} <small>@ #{curriculum.organization}</small>".html_safe
+        %p= curriculum.description
+      .vitae.span2.pull-left
+        .to
+          %h3 To
+          %p= curriculum.to_date.nil? ? "Present" : curriculum.to_date.strftime("%B %Y")
+        .from
+          %h3 From
+          %p= curriculum.from_date.strftime("%B %Y")
