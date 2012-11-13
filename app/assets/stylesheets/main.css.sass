@@ -8,6 +8,7 @@ $radius: 4px
 body
   background: $gray
   padding-top: 170px
+  padding-bottom: 60px
   
 p,
 h2,
@@ -17,16 +18,26 @@ h5
   color: $blue
   
 h1
-  background: $light-green
   font-size: 20px
   line-height: 50px
   margin: 0px
   font-weight: normal
   text-align: center
-  position: fixed
   top: 70px
   width: 100%
   color: $dark-green
+  background: $light-green
+  @media (min-width: 979px)
+    position: fixed
+    z-index: 1
+  @media (max-width: 979px)
+    font-size: 24px
+    margin-bottom: 25px
+    border-radius: $radius
+  @media (min-width: 768px) and (max-width: 979px)
+    width: 724px
+    margin-left: auto
+    margin-right: auto
   
 .center
   text-align: center
@@ -37,35 +48,46 @@ h1
   background: white
   
 .navbar
+  z-index: 2
   background: $gray
+  @media (max-width: 979px)
+    border-bottom: 5px solid $dark-gray
   a.brand
     width: 92px
     line-height: 50px
     text-indent: -10000px
-    background: url(/assets/logo.png)
-    margin-left: 0px
+    background: url(/assets/logo.png) top left no-repeat
+    @media (min-width: 979px)
+      margin-left: 0px
+    @media (max-width: 979px)
+      width: 137px
+      background-position: 25px 0px
+  a.btn-navbar, a.btn-navbar:hover
+    color: $dark-green
+    background: $light-green
+    border: none
+    line-height: 43px
+    text-shadow: none
+    font-weight: bold
   ul.nav
     li
-      line-height: 50px
       a
         color: $dark-green
         text-shadow: none
+        @media (max-width: 979px)
+          background: $dark-gray
       a:hover
         color: $dark-green
-        text-decoration: underline
-      a.selected
-        background: url(/assets/menu-marker.png) bottom center no-repeat
-    li:last-of-type
-      a
-        margin-right: -15px
-.subnavbar
-  top: 70px
-  background: $light-green
-  ul.nav
-    li
-      line-height: 30px
-      a.selected
-        background: url(/assets/submenu-marker.png) bottom center no-repeat
+    @media (min-width: 979px)
+      li
+        line-height: 50px
+        a:hover
+          text-decoration: underline
+        a.selected
+          background: url(/assets/menu-marker.png) bottom center no-repeat
+      li:last-of-type
+        a
+          margin-right: -15px
 
 #body
   a
@@ -75,44 +97,79 @@ h1
   /* About Me */
   
   #about-me
-    > div
-      width: 428px
+    .box
+      margin-bottom: 30px
+      @media (max-width: 979px)
+        margin-bottom: 15px
     .copy
       font-size: 16px
       line-height: 28px
-      height: 428px
+      p:first-of-type
+        margin-top: 0px
+        padding-top: 0px
+      p:last-of-type
+        margin-bottom: 0px
+        padding-bottom: 0px
+    img
+      width: 100%
+      object-fit: contain
+      border-radius: $radius
       
   /* Skills */
   
   .skill
-    width: 188px
-    height: 188px
-    margin-bottom: 20px
+    position: relative
+    @media (min-width: 1200px)
+      height: 160px
+    @media (min-width: 980px) and (max-width: 1199px)
+      height: 180px
+    @media (max-width: 979px)
+      height: 240px
+    margin-bottom: 30px
     h2
       font-size: 22px
       line-height: 22px
       margin: 0px 0px 14px 0px
     a
       display: block
+      position: absolute
+      width: 100%
+      bottom: 0px
+      margin-left: -15px
+      border-top: 1px solid $dark-gray
+      line-height: 30px
       text-align: center
+    a:hover
+      background: $gray
   
   /* CV */
   
   .curriculum
-    width: 748px
     height: 108px
+    @media (max-width: 767px)
+      margin-bottom: 5px
+      height: 168px
     h2
       font-size: 18px
       line-height: 18px
       margin: 0px 0px 9px 0px
+      @media (max-width: 767px)
+        font-size: 16px
       small
         font-size: 18px
+        @media (max-width: 767px)
+          font-size: 14px
         font-weight: normal
         color: inherit
+    p
+      @media (max-width: 767px)
+        font-size: 12px
   .vitae
-    height: 108px
+    margin-bottom: 25px
     .to
       margin-bottom: 20px
+      @media (max-width: 767px)
+        margin-bottom: 5px
     h3
       background: $dark-green
       color: white
@@ -122,11 +179,15 @@ h1
       text-align: center
       font-weight: normal
       border-radius: $radius
+      @media (max-width: 767px)
+        line-height: 30px
     p
       background: $light-green
       color: $dark-green
       margin: 0px
       font-size: 14px
+      @media (min-width: 768px) and (max-width: 979px)
+        font-size: 12px
       line-height: 35px
       text-align: center
       border-radius: $radius

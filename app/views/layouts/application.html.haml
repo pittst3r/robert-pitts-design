@@ -10,24 +10,28 @@
     /[if lt IE 9]
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     = javascript_include_tag "application"
-    = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag "application", media: "all"
+    = stylesheet_link_tag "bootstrap-responsive", media: "all"
 
   %body
     .navbar.navbar-fixed-top
       .container
+        %a.btn.btn-navbar{ data: { toggle: "collapse", target: ".nav-collapse" } }
+          Nav
         %a.brand{ href: "#" } Robert Pitts
-        %ul.nav.pull-right
-          %li
-            %a{ href: "/about", class: "#{selected('about')}" } About
-          %li
-            %a{ href: "/contact", class: "#{selected('contact')}" } Contact
-          %li
-            %a{ href: "/skills", class: "#{selected('skills')}" } Skills
-          %li
-            %a{ href: "/cv", class: "#{selected('cv')}" } Curriculum Vitæ
-          %li
-            %a{ href: "https://github.com/sweatypitts" } Github
-          %li
-            %a{ href: "http://www.linkedin.com/in/robertdeanpitts" } Linkedin
+        .nav-collapse.collapse
+          %ul.nav.pull-right
+            %li
+              %a{ href: "/about", class: "#{selected('about')}" } About
+            %li
+              %a{ href: "/contact", class: "#{selected('contact')}" } Contact
+            %li
+              %a{ href: "/skills", class: "#{selected('skills')}" } Skills
+            %li
+              %a{ href: "/cv", class: "#{selected('cv')}" } Curriculum Vitæ
+            %li
+              %a{ href: "https://github.com/sweatypitts" } Github
+            %li
+              %a{ href: "http://www.linkedin.com/in/robertdeanpitts" } Linkedin
     
     = yield
