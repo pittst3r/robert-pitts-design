@@ -7,10 +7,26 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Skill.all.delete
-16.times do
-  s = Skill.create(name: Faker::Lorem.words(2).each(&:upcase).join(" "), description: Faker::Lorem.paragraph)
-  puts "'#{s.name}' created."
-end
+# 16.times do
+#   s = Skill.create(name: Faker::Lorem.words(2).each(&:upcase).join(" "), description: Faker::Lorem.paragraph)
+#   puts "'#{s.name}' created."
+# end
+Skill.create(
+  name: "Ruby",
+  description: "I have been using Ruby in some form or another since about 2006. Python is actually what led me to Ruby; during my time learning Python I discovered that similar in many ways yet had a larger (what it seemed to me) community&mdash;for web anyway. As it turns out, I made a good choice because there is now a giant community and countless tools for all sorts of things."
+)
+Skill.create(
+  name: "Ruby on Rails",
+  description: "As you may have guessed, Rails was my doorway to the Ruby world. Since my introduction to it in 2006 it has really grown into an incredibly powerful tool. Deployment is ridiculously easy with services like Heroku. The proliferation of gems that can be used with Rails is like a dream come true. As time goes on, it \"just works\" better and better. Getting an app up and running has never been easier."
+)
+Skill.create(
+  name: "Sinatra",
+  description: "I use Sinatra when Rails is overkill. It's my go-to framework when I just need a simple website."
+)
+Skill.create(
+  name: "jQuery",
+  description: "jQuery made javascript fun for me again. When I was young and green, unobtrusive javascript was not really a concern of mine. However, as I grew my craft and became increasingly particular about my markup, writing unobtrusive javascript was just a pain in the ass. I felt like I was always just <em>getting things ready</em> to make things happen rather than <em>actually</em> making things happen. jQuery fixed this. Not only does it make javascript fun, it makes it much faster to write."
+)
 
 Curriculum.all.delete
 Curriculum.create(

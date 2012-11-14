@@ -7,11 +7,13 @@
       .span3
         .skill.box
           %h2= skill.name
-          %p= truncate(skill.description, length: 135, separator: '...')
-          %a{ href: "##{skill.name.parameterize}", data: { toggle: "modal" } } Read more...
-        %div{ id: "#{skill.name.parameterize}", class: "modal hide fade", role: "dialog" }
-          .modal-header
-            %button.close{ data: { dismiss: "modal" } } x
-            %h3= skill.name
-          .modal-body
-            %p= skill.description
+          %p= truncate(skill.description.html_safe, length: 135, separator: '...')
+          - if skill.description.html_safe.length > 135
+            %a{ href: "##{skill.name.parameterize}", data: { toggle: "modal" } } Read more...
+        - if skill.description.html_safe.length > 135
+          %div{ id: "#{skill.name.parameterize}", class: "modal hide fade", role: "dialog" }
+            .modal-header
+              %button.close{ data: { dismiss: "modal" } } x
+              %h3= skill.name
+            .modal-body
+              %p= skill.description.html_safe
