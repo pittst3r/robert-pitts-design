@@ -3,6 +3,10 @@
 
 #body.container
   .row
+    .span12
+      .skill-search
+        %input{ placeholder: "Narrow it down..."}
+  .row
     - skills.each do |skill|
       .span3
         .skill.box

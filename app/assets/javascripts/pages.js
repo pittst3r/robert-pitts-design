@@ -1,2 +1,16 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(function() {
+  
+  $('.skill-search input').keyup(function() {
+    query = $(this).val();
+    regex = new RegExp(query, "i");
+    $('.skill h2').each(function(index) {
+      skill = $(this).text();
+      if (regex.test(skill)) {
+        $(this).parents('.span3').show();
+      } else {
+        $(this).parents('.span3').hide();
+      }
+    });
+  });
+  
+});

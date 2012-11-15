@@ -131,6 +131,24 @@ footer
       
   /* Skills */
   
+  .skill-search
+    margin-bottom: 30px
+    @media (max-width: 767px)
+      display: none
+    input
+      $side-padding: 12px
+      $width-offset: $side-padding * 2 + 2
+      width: 940px - $width-offset
+      padding: 8px $side-padding
+      border: 1px solid $dark-gray
+      border-radius: $radius
+      font-size: 18px
+      line-height: 27px
+      color: $dark-green
+      @media (min-width: 1200px)
+        width: 1170px - $width-offset
+      @media (min-width: 768px) and (max-width: 979px)
+        width: 724px - $width-offset
   .skill
     position: relative
     @media (min-width: 1200px)
