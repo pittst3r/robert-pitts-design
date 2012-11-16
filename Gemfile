@@ -14,12 +14,9 @@ gem 'rest-client'
 gem 'json'
 gem 'octokit'
 gem 'hashie'
-
-group :assets do
-  gem 'haml-rails'
-  gem 'sass-rails'
-  gem 'uglifier'
-end
+gem 'haml-rails'
+gem 'sass-rails'
+gem 'uglifier'
 
 group :test, :development do
   gem 'capybara'
