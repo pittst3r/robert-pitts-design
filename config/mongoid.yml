@@ -69,6 +69,6 @@ test:
 production:
   sessions:
     default:
-      uri: ENV['RPD_PRODUCTION']
+      uri: <%= ENV['RPD_PRODUCTION'] %>
       options:
         consistency: :strong
