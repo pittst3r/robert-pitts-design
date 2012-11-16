@@ -11,7 +11,7 @@
       .span3
         .skill.box
           %h2= skill.name
-          %p= truncate(skill.description.html_safe, length: 135, separator: '...')
+          %p= truncate(skill.description, length: 135, separator: '...').html_safe
           - if skill.description.html_safe.length > 135
             %a{ href: "##{skill.name.parameterize}", data: { toggle: "modal" } } Read more...
         - if skill.description.html_safe.length > 135
