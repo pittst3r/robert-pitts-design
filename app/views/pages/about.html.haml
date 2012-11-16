@@ -1,19 +1,53 @@
 %h1 
-  .container About Me
+  .container About
 
 #body.container
-  #about-me
+  #about
     .row
-      .span4.offset4
-        .copy.box
-          %p Robert Pitts, Bit Baron
-    .row
-      .span4.offset4
-        .portrait.box
-          %img{ src: "/assets/sweatypitts.jpg" }
-    .row
-      .span4.offset4
-        .copy.box
-          %p Experienced, not academic. A shareholder, not just a stakeholder. I’ve learned everything I know from experience, guidance from those more knowledgable than I, and self-directed research.
-          %p Don’t think outside the box, make the box. Constraints are necessary for solving problems properly; they also make it a whole lot easier. Clearly define constraints before even looking for a solution. 
-          %p Details are a big deal. They’re what make a difference between you and me, awesome food and mediocre food, and good design and bad design. Just because you can’t put your finger on it doesn’t mean it’s not there.
+      .span4
+        %h2 About my site
+        .box
+          %h3 Technologies and gems utilized
+          %ul
+            %li Ruby on Rails
+            %li MongoDB
+            %li Mongoid
+            %li HAML
+            %li SASS
+            %li jQuery
+            %li Decent Exposure
+            %li Octokit
+            %li Hashie
+            %li Heroku
+            %li GitHub
+            %li GitHub API
+            %li Bootstrap
+            %li Photoshop (for mockups)
+        .box
+          %h3 Responsive design
+          %p I have made this site with a responsive design, catering to multiple screen sizes. Resize your browser window and see how it changes as it gets smaller. If you're reading this on your phone go to a computer.
+        .box
+          %h3 Please explore
+          %p You will see that I've demonstrated many of my abilities in this site alone. Also, check out the <a href="https://github.com/sweatypitts/robert-pitts-design" title="Robert Pitts Design GitHub Repo">GitHub repo for this site</a>&mdash;it's public.
+      .span4
+        #github
+          %h2 GitHub commits for robertpittsdesign.com
+          .box
+            %dl
+              - commits.slice(0..9).each do |commit|
+                %dt= "<a href=\"https://github.com/sweatypitts/robert-pitts-design/commit/#{commit.sha}\">#{commit.sha.slice(0..6)}</a> @ #{DateTime.parse(commit.commit.author.date).strftime('%-m/%-d %l:%M %P')}".html_safe
+                %dd= commit.commit.message
+            %p= link_to("See more of the action...", "https://github.com/sweatypitts/robert-pitts-design")
+      .span4
+        #about-me
+          .row
+            .span4
+              %h2 Robert Pitts, Bit Baron
+            .span4
+              .portrait.box
+                %img{ src: "/assets/sweatypitts.jpg" }
+            .span4
+              .copy.box
+                %p Experienced, not academic. A shareholder, not just a stakeholder. I’ve learned everything I know from experience, guidance from those more knowledgable than I, and self-directed research.
+                %p Don’t think outside the box, make the box. Constraints are necessary for solving problems properly; they also make it a whole lot easier. Clearly define constraints before even looking for a solution. 
+                %p Details are a big deal. They’re what make a difference between you and me, awesome food and mediocre food, and good design and bad design. Just because you can’t put your finger on it doesn’t mean it’s not there.

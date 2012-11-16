@@ -11,12 +11,13 @@ body
   padding-bottom: 0px
   
 p,
+dl,
+ul,
 h2,
 h3,
 h4,
 h5
   color: $blue
-  
 h1
   font-size: 20px
   line-height: 50px
@@ -57,6 +58,13 @@ footer
   border: 1px solid $dark-gray
   border-radius: $radius
   background: white
+  ul
+    margin: 0px
+    padding: 0px
+    list-style: none
+    li:before
+      content: "-"
+      margin-right: .5em
   
 .navbar
   z-index: 2
@@ -92,6 +100,9 @@ footer
           background: $dark-gray
       a:hover
         color: $dark-green
+    li:last-of-type
+      a
+        padding-right: 0px
     @media (min-width: 979px)
       li
         line-height: 50px
@@ -108,26 +119,53 @@ footer
     color: $dark-green
   
   
-  /* About Me */
-  
-  #about-me
+  /* About */
+
+  #about
+    h2
+      @media (min-width: 979px)
+        margin: 0px 0px 30px 0px
+      line-height: 1em
+      font-size: 16px
+      text-align: center
+    h3
+      margin: 0px 0px 15px 0px
+      line-height: 1em
+      font-size: 14px
     .box
       margin-bottom: 30px
       @media (max-width: 979px)
         margin-bottom: 15px
-    .copy
-      font-size: 16px
-      line-height: 28px
-      p:first-of-type
-        margin-top: 0px
-        padding-top: 0px
-      p:last-of-type
+    #github
+      dl
+        margin: 0px
+        dt
+          color: $dark-green
+          margin: 0px 0px 5px 0px
+          font-weight: normal
+          a
+            font-weight: bold
+        dd
+          border-bottom: 1px solid $dark-gray
+          padding: 0px 15px 15px 15px
+          margin: 0px -15px 15px -15px
+      p
         margin-bottom: 0px
-        padding-bottom: 0px
-    img
-      width: 100%
-      object-fit: contain
-      border-radius: $radius
+  
+    #about-me
+      .copy
+        font-size: 16px
+        line-height: 28px
+        p:first-of-type
+          margin-top: 0px
+          padding-top: 0px
+        p:last-of-type
+          margin-bottom: 0px
+          padding-bottom: 0px
+      img
+        width: 100%
+        object-fit: contain
+        border-radius: $radius
       
   /* Skills */
   

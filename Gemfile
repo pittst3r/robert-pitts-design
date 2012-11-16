@@ -10,6 +10,10 @@ gem 'jquery-rails'
 gem 'mongo'
 gem 'bson_ext'
 gem 'mongoid'
+gem 'rest-client'
+gem 'json'
+gem 'octokit'
+gem 'hashie'
 
 group :assets do
   gem 'haml-rails'
