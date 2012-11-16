@@ -1,8 +1,9 @@
 RobertPittsDesign::Application.routes.draw do
 
   match 'ui(/:action)', controller: 'uis'
-  
   match '/:action', controller: 'pages'
+  
+  root to: 'pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
