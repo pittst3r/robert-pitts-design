@@ -7,7 +7,7 @@
       .span10.pull-right
         .curriculum.box
           %h2= "#{curriculum.title} <small>@ #{curriculum.organization}</small>".html_safe
-          %p= curriculum.description
+          %p= curriculum.description.html_safe
       .span2.pull-left
         .clearfix
         .vitae
