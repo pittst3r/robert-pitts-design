@@ -67,11 +67,11 @@ module RobertPittsDesign
     
     config.sass.preferred_syntax = :sass
     
-    # config.before_initialize do
-    #   dev = File.join(Rails.root, 'config', 'development.yml')
-    #   YAML.load(File.open(dev)).each do |key, value|
-    #     ENV[key.to_s] = value
-    #   end if File.exists?(dev)
-    # end
+    config.before_initialize do
+      dev = File.join(Rails.root, 'config', 'development.yml')
+      YAML.load(File.open(dev)).each do |key, value|
+        ENV[key.to_s] = value
+      end if File.exists?(dev)
+    end
   end
 end
