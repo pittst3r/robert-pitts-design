@@ -35,7 +35,7 @@
           .box
             %dl
               - commits.slice(0..9).each do |commit|
-                %dt= "<a href=\"https://github.com/sweatypitts/robert-pitts-design/commit/#{commit.sha}\">#{commit.sha.slice(0..6)}</a> @ #{DateTime.parse(commit.commit.author.date).strftime('%-m/%-d %l:%M %P')}".html_safe
+                %dt= "<a href=\"https://github.com/sweatypitts/robert-pitts-design/commit/#{commit.sha}\">#{commit.sha.slice(0..6)}</a> @ #{DateTime.parse(commit.commit.author.date).new_offset('-05:00').strftime('%-m/%-d')}".html_safe
                 %dd= commit.commit.message
             %p= link_to("See more of the action...", "https://github.com/sweatypitts/robert-pitts-design")
       .span4
