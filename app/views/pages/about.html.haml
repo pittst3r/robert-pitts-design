@@ -5,6 +5,25 @@
   #about
     .row
       .span4
+        #about-me
+          .row
+            .span4
+              %h2 New Product Launch
+              .box
+                %h3
+                  %a{ href: "http://getoutreach.co/", title: "Outreach: Church websites made easy." } Outreach
+                %p A multi-tenant application for (easily) making and maintaining church websites.
+            .span4
+              %h2 Robert Pitts
+            .span4
+              .portrait.box
+                %img{ src: "/assets/sweatypitts.jpg" }
+            .span4
+              .copy.box
+                %p Experienced, not academic. A shareholder, not just a stakeholder. I’ve learned everything I know from experience, guidance from those more knowledgable than I, and self-directed research.
+                %p Don’t think outside the box, make the box. Constraints are necessary for solving problems properly; they also make it a whole lot easier. Clearly define constraints before even looking for a solution. 
+                %p Details are a big deal. They’re what make a difference between you and me, awesome food and mediocre food, and good design and bad design. Just because you can’t put your finger on it doesn’t mean it’s not there.
+      .span4
         %h2 About my site
         .box
           %h3 Technologies and gems utilized
@@ -38,16 +57,3 @@
                 %dt= "<a href=\"https://github.com/sweatypitts/robert-pitts-design/commit/#{commit.sha}\">#{commit.sha.slice(0..6)}</a> @ #{DateTime.parse(commit.commit.author.date).new_offset('-05:00').strftime('%-m/%-d')}".html_safe
                 %dd= commit.commit.message
             %p= link_to("See more of the action...", "https://github.com/sweatypitts/robert-pitts-design")
-      .span4
-        #about-me
-          .row
-            .span4
-              %h2 Robert Pitts, Bit Baron
-            .span4
-              .portrait.box
-                %img{ src: "/assets/sweatypitts.jpg" }
-            .span4
-              .copy.box
-                %p Experienced, not academic. A shareholder, not just a stakeholder. I’ve learned everything I know from experience, guidance from those more knowledgable than I, and self-directed research.
-                %p Don’t think outside the box, make the box. Constraints are necessary for solving problems properly; they also make it a whole lot easier. Clearly define constraints before even looking for a solution. 
-                %p Details are a big deal. They’re what make a difference between you and me, awesome food and mediocre food, and good design and bad design. Just because you can’t put your finger on it doesn’t mean it’s not there.
