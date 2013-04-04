@@ -1,14 +1,15 @@
 $gray: #f2f2f2
-$dark-gray: #d9d9d9
+$dark-gray: darken($gray, 3%)
 $light-green: #cfda2b
 $dark-green: #75813a
 $blue: #526f93
-$radius: 4px
+$radius: 2px
 
 body
   background: $gray
   padding-top: 170px
   padding-bottom: 0px
+  font-family: 'Source Sans Pro', sans-serif
   
 p,
 dl,
@@ -56,15 +57,12 @@ footer
 .box
   padding: 15px
   border: 1px solid $dark-gray
-  border-radius: $radius
   background: white
   ul
     margin: 0px
     padding: 0px
-    list-style: none
-    li:before
-      content: "-"
-      margin-right: .5em
+    list-style: square
+    list-style-position: inside
   
 .navbar
   z-index: 2
