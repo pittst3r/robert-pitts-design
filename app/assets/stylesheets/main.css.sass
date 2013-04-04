@@ -55,6 +55,7 @@ footer
 .center
   text-align: center
 .box
+  position: relative
   padding: 15px
   border: 1px solid $dark-gray
   background: white
@@ -63,6 +64,15 @@ footer
     padding: 0px
     list-style: square
     list-style-position: inside
+  p.blog-date
+    position: absolute
+    bottom: 5px
+    right: 5px
+    margin: 0
+    align: right
+    font-size: 10px
+    line-height: 10px
+    color: darken($dark-gray, 20%)
   
 .navbar
   z-index: 2
