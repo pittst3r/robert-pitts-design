@@ -17,6 +17,6 @@ class PagesController < ApplicationController
         posts << Hashie::Mash.new(title: item.title, body: item.description, link: item.link, date: DateTime.parse(item.pubDate.to_s).strftime('%F'))
       end
     end
-    posts
+    posts[0..9]
   }
 end
