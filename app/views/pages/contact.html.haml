@@ -2,4 +2,11 @@
   .container Contact Me
 
 #body.container
-  %p.center <a href="mailto:me@robertpittsdesign.com">me@robertpittsdesign.com</a>
+  .row
+    .span4.offset4
+      .box
+        %ul
+          %li= link_to "me@robertpittsdesign.com", "mailto:me@robertpittsdesign.com"
+          %li= link_to "@sweatypitts", "https://twitter.com/sweatypitts"
+          %li= link_to "GitHub", "https://github.com/sweatypitts"
+          %li= link_to "LinkedIn", "http://www.linkedin.com/in/robertdeanpitts"
